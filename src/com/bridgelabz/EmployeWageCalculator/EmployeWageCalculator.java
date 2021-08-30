@@ -14,7 +14,7 @@ public class EmployeWageCalculator {
 			empHrs = 0;
 		}
 		empWage = empHrs * EMP_RATE_PER_HOUR;
-		System.out.println("Emp Wage : "+ empWage);
+		System.out.println("Employe Wage : "+ empWage);
 	}
 
 }
