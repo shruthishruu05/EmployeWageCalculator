@@ -8,6 +8,7 @@ public class EmployeWageCalculator {
 	private static int empRatePerHour;
 	private static int numOfWorkingDays;
 	private static int maxHoursInMonth ;
+	private int totalWage;
 	
 	EmployeWageCalculator(String company, int empRatePerHour, int numOfWorkingDays, int maxHoursInMonth){
 		this.company = company;
@@ -36,17 +37,25 @@ public class EmployeWageCalculator {
 			System.out.println("Days#: "+totalWorkingDays+"     Emp Hrs: "+ empHrs);
 		}
 		int totalWage = totalEmpHrs *empRatePerHour;
-		System.out.println("The total wage of employee in "+company+" is : "+ totalWage);
+	}
+	@Override
+	public String toString() {
+		return "The total wage of employee in "+company+" is : "+totalWage;
 	}
 	
 	public static void main(String[] args) {
 		EmployeWageCalculator dMart = new EmployeWageCalculator("Dmart",20, 5, 50);
-		dMart.computeEmpWage();
-		
 		EmployeWageCalculator Reliance = new EmployeWageCalculator("Reliance",22, 6, 60);
+		
+		dMart.computeEmpWage();
+		System.out.println(dMart);
+		
 		Reliance.computeEmpWage();
+		System.out.println(Reliance);
 		
 	}
+
+		
 
 }
 
